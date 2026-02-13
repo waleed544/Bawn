@@ -1619,6 +1619,21 @@ body.light-mode .logo-svg {
                 padding: 0 20px;
             }
 
+            .nav-actions {
+                gap: 8px;
+                flex-shrink: 0;
+            }
+
+            .theme-toggle {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
             .hero-title {
                 font-size: 28px;
             }
@@ -1677,6 +1692,15 @@ body.light-mode .logo-svg {
             .client-logo-placeholder {
                 width: 200px;
                 height: 200px;
+            }
+
+            .nav-actions {
+                gap: 6px;
+            }
+
+            .hamburger span {
+                width: 25px;
+                height: 2px;
             }
         }
 
