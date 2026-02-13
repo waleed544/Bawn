@@ -1529,6 +1529,8 @@ body.light-mode .logo-svg {
                 padding: 100px 40px;
                 transition: right 0.5s cubic-bezier(0.4, 0, 0.2, 1);
                 border-left: 1px solid var(--glass-border);
+                overflow-y: auto;
+                overscroll-behavior: contain;
             }
 
             body[dir="rtl"] .nav-center {
