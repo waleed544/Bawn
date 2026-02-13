@@ -243,8 +243,8 @@
         }
 
         .logo-svg {
-            width: 50px;
-            height: 50px;
+            width: 150px;
+            height: auto;
             animation: logoFloat 3s ease-in-out infinite;
         }
 /* الوضع الداكن (الافتراضي) */
@@ -896,16 +896,17 @@ body.light-mode .logo-svg {
         }
 
         .why-card {
-            padding: 50px 40px;
+            padding: 12px 8px;
             position: relative;
+            margin-bottom: 20px;
         }
 
         .why-image-placeholder {
             width: 100%;
-            height: 200px;
+            height: 120px;
             /* background: rgba(77, 212, 212, 0.1); */
             border-radius: 20px;
-            margin-bottom: 30px;
+            margin-bottom: 15px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -926,7 +927,7 @@ body.light-mode .logo-svg {
         }
 
         .why-default-icon {
-            font-size: 72px;
+            font-size: 96px;
             animation: bounce 2s ease-in-out infinite;
         }
 
@@ -1311,13 +1312,14 @@ body.light-mode .logo-svg {
         .team-card {
             text-align: center;
             padding: 40px 30px;
+            margin-bottom: 20px;
         }
 
         .team-avatar {
             width: 200px;
             height: 200px;
             margin: 0 auto 30px;
-            background: linear-gradient(135deg, var(--secondary-teal), var(--accent-gold));
+            /* background: linear-gradient(135deg, var(--secondary-teal), var(--accent-gold)); */
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -1325,6 +1327,7 @@ body.light-mode .logo-svg {
             font-size: 48px;
             font-weight: 900;
             color: var(--white);
+            border: white solid 4px;
             box-shadow: 0 20px 40px rgba(77, 212, 212, 0.3);
         }
 
@@ -1703,6 +1706,15 @@ body.light-mode .logo-svg {
             .hamburger span {
                 width: 25px;
                 height: 2px;
+            }
+
+            .logo-svg {
+                width: 80px;
+                height: auto;
+            }
+
+            .logo-container {
+                gap: 10px;
             }
         }
 
