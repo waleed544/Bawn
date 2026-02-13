@@ -232,6 +232,18 @@
             height: 50px;
             animation: logoFloat 3s ease-in-out infinite;
         }
+/* الوضع الداكن (الافتراضي) */
+body:not(.light-mode) .logo-svg {
+  filter: invert(.1) brightness(1.5);
+}
+
+/* الوضع الفاتح: رجّع اللوجو لطبيعته */
+body.light-mode .logo-svg {
+  filter: none;
+}
+
+}
+
 
         /* Add this class to make logo easily replaceable */
         .logo-svg-replaceable {
@@ -1122,9 +1134,9 @@
         }
 
         .client-logo-placeholder {
-            width: 120px;
-            height: 120px;
-            background: rgba(77, 212, 212, 0.05);
+            width: 180px;
+            height: 180px;
+            /* background: rgba(77, 212, 212, 0.05); */
             border-radius: 20px;
             display: flex;
             align-items: center;
@@ -1139,7 +1151,7 @@
         }
 
         .client-logo-placeholder::before {
-            content: '🏢';
+            /* content: '🏢'; */
             font-size: 48px;
             opacity: 0.3;
             position: absolute;
@@ -1252,8 +1264,8 @@
         }
 
         .team-avatar {
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
             margin: 0 auto 30px;
             background: linear-gradient(135deg, var(--secondary-teal), var(--accent-gold));
             border-radius: 50%;
