@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بوان | Bawan - حلول مكتبية متكاملة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&family=Cairo:wght@300;400;600;700;900&family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <!-- <div class="cursor"></div>
+    <div class="cursor-follower"></div> -->
+
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="bg-gradient"></div>
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo-container">
+
+                     <img src="assets/logo.PNG" alt="Bawan Logo" class="logo-svg">
+                    <!-- 
+                    ========================================
+                    REPLACE LOGO HERE - 3 EASY OPTIONS:
+                    ========================================
+                    
+                    Option 1: Replace entire SVG with img tag
+                    -----------------------------------------
+                    <img src="your-logo.png" alt="Bawan Logo" class="logo-svg">
+                    
+                    Option 2: Use the logo from PDF (convert to PNG/SVG first)
+                    ----------------------------------------------------------
+                    <img src="bawan-logo.png" alt="Bawan Logo" class="logo-svg">
+                    
+                    Option 3: Keep SVG and update the paths below
+                    ----------------------------------------------
+                    Keep the existing SVG and modify the colors/shapes
+                    
+                    ========================================
+                    -->
+                    <!-- <svg class="logo-svg logo-svg-replaceable" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#4dd4d4;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#e6c968;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <path d="M 30 20 A 15 15 0 0 1 30 50 Z" fill="url(#grad1)"/>
+                        <path d="M 70 20 A 15 15 0 0 0 85 20 L 85 35 Z" fill="#e6c968"/>
+                        <path d="M 70 35 A 15 15 0 0 0 70 65 Z" fill="#4dd4d4"/>
+                        <circle cx="70" cy="50" r="15" fill="#e6c968"/>
+                        <rect x="40" y="35" width="30" height="30" fill="#9ba8bc"/>
+                        <path d="M 70 65 A 15 15 0 0 0 85 65 L 85 80 Z" fill="#5b8ec6"/>
+                        <circle cx="30" cy="65" r="15" fill="#5b8ec6"/>
+                        <rect x="55" y="65" width="30" height="30" fill="#9ba8bc"/>
+                        <rect x="15" y="80" width="30" height="20" rx="5" fill="#4dd4d4"/>
+                        <circle cx="70" cy="90" r="15" fill="#e6c968"/>
+                        <path d="M 85 80 L 100 80 L 100 100 L 85 100 A 15 15 0 0 0 85 80 Z" fill="#4dd4d4"/>
+                    </svg> -->
+                    <div class="logo" data-ar="بوان" data-en="Bawan">بوان</div>
+                </div>
+
+                <div class="nav-center">
+                    <div class="nav-links">
+                        <a href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+                        <a href="#about" data-ar="من نحن" data-en="About">من نحن</a>
+                        <a href="#vision" data-ar="رؤيتنا" data-en="Vision">رؤيتنا</a>
+                        <a href="#values" data-ar="قيمنا" data-en="Values">قيمنا</a>
+                        <a href="#products" data-ar="منتجاتنا" data-en="Products">منتجاتنا</a>
+                        <a href="#clients" data-ar="عملاؤنا" data-en="Clients">عملاؤنا</a>
+                        <a href="#team" data-ar="فريقنا" data-en="Team">فريقنا</a>
+                        <a href="#contact" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a>
+                    </div>
+                </div>
+
+                <div class="nav-actions">
+                    <button class="lang-toggle" id="langToggle" data-ar="EN" data-en="AR">EN</button>
+                    <button class="theme-toggle" id="themeToggle">🌙</button>
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-subtitle" data-ar="حلول مكتبية متكاملة" data-en="Integrated Office Solutions">حلول مكتبية متكاملة</div>
+                    <h1 class="hero-title" data-ar="شريكك الموثوق لقطاع الأعمال" data-en="Your Trusted Business Partner">شريكك الموثوق لقطاع الأعمال</h1>
+                    <p class="hero-description" data-ar="خبرة تمتد لأكثر من 25 عامًا في السوق السعودي، نوفر المنتجات والخدمات المكتبية للقطاعين العام والخاص بمعايير عالية وقيمة مستدامة" 
+                       data-en="Over 25 years of experience in the Saudi market, providing office products and services to both public and private sectors with high standards and sustainable value">
+                        خبرة تمتد لأكثر من 25 عامًا في السوق السعودي، نوفر المنتجات والخدمات المكتبية للقطاعين العام والخاص بمعايير عالية وقيمة مستدامة
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="cta-button cta-primary" data-ar="اكتشف المزيد" data-en="Discover More">اكتشف المزيد</button>
+                        <button class="cta-button cta-secondary" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="heroGrad1">
+                                <stop offset="0%" style="stop-color:#4dd4d4"/>
+                                <stop offset="100%" style="stop-color:#5b8ec6"/>
+                            </linearGradient>
+                            <linearGradient id="heroGrad2">
+                                <stop offset="0%" style="stop-color:#e6c968"/>
+                                <stop offset="100%" style="stop-color:#d4a958"/>
+                            </linearGradient>
+                            <filter id="heroGlow">
+                                <feGaussianBlur stdDeviation="5"/>
+                                <feMerge>
+                                    <feMergeNode/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        
+                        <path d="M 140 40 A 60 60 0 0 0 200 40 L 200 100 Z" fill="url(#heroGrad2)" filter="url(#heroGlow)">
+                            <animateTransform attributeName="transform" type="rotate" from="0 170 70" to="360 170 70" dur="20s" repeatCount="indefinite"/>
+                        </path>
+                        
+                        <path d="M 100 80 A 60 60 0 0 1 100 200 Z" fill="url(#heroGrad1)" filter="url(#heroGlow)" opacity="0.9">
+                            <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" repeatCount="indefinite"/>
+                        </path>
+                        
+                        <circle cx="280" cy="140" r="60" fill="url(#heroGrad2)" filter="url(#heroGlow)">
+                            <animate attributeName="r" values="60;65;60" dur="2s" repeatCount="indefinite"/>
+                        </circle>
+                        
+                        <path d="M 280 140 A 60 60 0 0 0 280 260 Z" fill="url(#heroGrad1)" filter="url(#heroGlow)">
+                            <animate attributeName="opacity" values="1;0.8;1" dur="3s" repeatCount="indefinite"/>
+                        </path>
+                        
+                        <rect x="160" y="140" width="120" height="120" fill="#9ba8bc" opacity="0.8" filter="url(#heroGlow)">
+                            <animateTransform attributeName="transform" type="rotate" from="0 220 200" to="10 220 200" dur="4s" repeatCount="indefinite" additive="sum"/>
+                        </rect>
+                        
+                        <circle cx="100" cy="260" r="60" fill="#5b8ec6" filter="url(#heroGlow)">
+                            <animate attributeName="cy" values="260;255;260" dur="3s" repeatCount="indefinite"/>
+                        </circle>
+                        
+                        <path d="M 280 260 A 60 60 0 0 0 340 260 L 340 320 Z" fill="#5b8ec6" filter="url(#heroGlow)">
+                            <animateTransform attributeName="transform" type="scale" values="1;1.05;1" dur="2s" repeatCount="indefinite" additive="sum"/>
+                        </path>
+                        
+                        <rect x="220" y="260" width="120" height="120" fill="#9ba8bc" opacity="0.8" filter="url(#heroGlow)">
+                            <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite"/>
+                        </rect>
+                        
+                        <rect x="60" y="320" width="120" height="80" rx="20" fill="url(#heroGrad1)" filter="url(#heroGlow)">
+                            <animate attributeName="y" values="320;315;320" dur="2.5s" repeatCount="indefinite"/>
+                        </rect>
+                        
+                        <circle cx="280" cy="360" r="60" fill="url(#heroGrad2)" filter="url(#heroGlow)">
+                            <animate attributeName="r" values="60;62;60" dur="2s" repeatCount="indefinite"/>
+                        </circle>
+                        
+                        <path d="M 340 320 L 400 320 L 400 400 L 340 400 A 60 60 0 0 0 340 320 Z" fill="url(#heroGrad1)" filter="url(#heroGlow)">
+                            <animate attributeName="opacity" values="1;0.9;1" dur="3s" repeatCount="indefinite"/>
+                        </path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title scroll-reveal" data-ar="من نحن" data-en="Who We Are">من نحن</h2>
+            <div class="about-grid">
+                <div class="glass-card scroll-reveal">
+                    <p class="about-text" data-ar="بوان شركة تجارية تأسست عام 2018، وانطلقت برؤية مبنية على خبرة عملية تتجاوز 25 عامًا في السوق السعودي."
+                       data-en="Bawan is a commercial company established in 2018, launched with a vision built on over 25 years of hands-on experience in the Saudi market.">
+                        بوان شركة تجارية تأسست عام 2018، وانطلقت برؤية مبنية على خبرة عملية تتجاوز 25 عامًا في السوق السعودي.
+                    </p>
+                </div>
+                <div class="glass-card scroll-reveal">
+                    <p class="about-text" data-ar="نقدم حلولًا مكتبية متكاملة تلبي احتياجات الجهات الحكومية والشركات الكبرى بكفاءة تشغيلية، مرونة في التوريد، وجودة يمكن الاعتماد عليها"
+                       data-en="We provide integrated office solutions that meet the needs of government entities and large corporations, delivering operational efficiency, supply flexibility, and quality you can rely on.">
+                        نقدم حلولًا مكتبية متكاملة تلبي احتياجات الجهات الحكومية والشركات الكبرى بكفاءة تشغيلية، مرونة في التوريد، وجودة يمكن الاعتماد عليها
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section id="vision">
+        <div class="container">
+            <h2 class="section-title scroll-reveal" data-ar="رؤيتنا" data-en="Our Vision">رؤيتنا</h2>
+            <div class="vision-content">
+                <div class="vision-images scroll-reveal">
+                    <div class="vision-image-card glass-card">
+                        <div class="vision-icon">🎯</div>
+                    </div>
+                    <div class="vision-image-card glass-card">
+                        <div class="vision-icon">🤝</div>
+                    </div>
+                </div>
+                <div class="glass-card vision-card scroll-reveal">
+                    <p class="vision-text" data-ar="أن نكون الشريك المفضل في توفير المنتجات والخدمات المكتبية من خلال تقديم تجربة متكاملة وقيمة حقيقية تدعم استمرارية أعمال عملائنا"
+                       data-en="To be the preferred partner in providing office products and services by delivering an integrated experience and real value that supports the continuity and sustainability of our clients' businesses">
+                        أن نكون الشريك المفضل في توفير المنتجات والخدمات المكتبية من خلال تقديم تجربة متكاملة وقيمة حقيقية تدعم استمرارية أعمال عملائنا
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section id="values">
+        <div class="container">
+            <h2 class="section-title scroll-reveal" data-ar="قيمنا" data-en="Our Values">قيمنا</h2>
+            <div class="values-grid">
+                <div class="glass-card value-card scroll-reveal">
+                    <div class="value-icon">✓</div>
+                    <h3 class="value-title" data-ar="الثقة" data-en="Reliability">الثقة</h3>
+                    <p class="value-subtitle" data-ar="Reliability" data-en="الثقة">Reliability</p>
+                </div>
+                <div class="glass-card value-card scroll-reveal">
+                    <div class="value-icon">◈</div>
+                    <h3 class="value-title" data-ar="الجودة" data-en="Quality">الجودة</h3>
+                    <p class="value-subtitle" data-ar="Quality" data-en="الجودة">Quality</p>
+                </div>
+                <div class="glass-card value-card scroll-reveal">
+                    <div class="value-icon">✓✓</div>
+                    <h3 class="value-title" data-ar="الإنجاز" data-en="Achievement">الإنجاز</h3>
+                    <p class="value-subtitle" data-ar="Achievement" data-en="الإنجاز">Achievement</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Bawan Section -->
+    <section id="why">
+        <div class="container">
+            <h2 class="section-title scroll-reveal" data-ar="لماذا بوان" data-en="Why Bawan">لماذا بوان</h2>
+            <div class="why-grid">
+                <div class="glass-card why-card scroll-reveal">
+                    <div class="why-image-placeholder">
+                        <div class="why-default-icon">💼</div>
+                    </div>
+                    <div class="why-number">01</div>
+                    <h3 class="why-title" data-ar="الريادة في الجودة والخدمات" data-en="Leadership in Quality & Services">الريادة في الجودة والخدمات</h3>
+                    <p class="why-description" data-ar="رواد في كل مايحتاجه المكتب نعمل معًا لتحقيق الأهداف التي نسعى لها"
+                       data-en="Pioneers in everything the modern office needs, working together to achieve our goals">
+                        رواد في كل مايحتاجه المكتب نعمل معًا لتحقيق الأهداف التي نسعى لها
+                    </p>
+                </div>
+                <div class="glass-card why-card scroll-reveal">
+                    <div class="why-image-placeholder">
+                        <div class="why-default-icon">🎯</div>
+                    </div>
+                    <div class="why-number">02</div>
+                    <h3 class="why-title" data-ar="خدمة العملاء" data-en="Customer Service">خدمة العملاء</h3>
+                    <p class="why-description" data-ar="نحن دائمًا على استعداد لتقديم أفضل مستوى من الخدمة"
+                       data-en="We are always ready to deliver the highest level of service">
+                        نحن دائمًا على استعداد لتقديم أفضل مستوى من الخدمة
+                    </p>
+                </div>
+                <div class="glass-card why-card scroll-reveal">
+                    <div class="why-image-placeholder">
+                        <div class="why-default-icon">💰</div>
+                    </div>
+                    <div class="why-number">03</div>
+                    <h3 class="why-title" data-ar="أسعار مناسبة" data-en="Competitive Pricing">أسعار مناسبة</h3>
+                    <p class="why-description" data-ar="نوفر منتجات وخدمات بجودة عالية وبأفضل قيمة"
+                       data-en="We offer high-quality products and services at the best value">
+                        نوفر منتجات وخدمات بجودة عالية وبأفضل قيمة
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Objectives Section -->
+    <section id="objectives">
+        <div class="container">
+            <h2 class="section-title scroll-reveal" data-ar="أهدافنا" data-en="Our Objectives">أهدافنا</h2>
+            <div class="objectives-grid">
+                <div class="glass-card objective-card scroll-reveal">
+                    <div class="objective-image-placeholder">
+                        <img src="/assets/dapasa.PNG" alt="Objective 1" class="objective-image">
+                    </div>
+                    <div class="objective-number">01</div>
+                    <p class="objective-text" data-ar="الريادة في جودة المنتجات والخدمات المقدمة لعملائنا"
+                       data-en="Leadership in the quality of products and services provided to our customers">
+                        الريادة في جودة المنتجات والخدمات المقدمة لعملائنا
+                    </p>
+                </div>
+                <div class="glass-card objective-card scroll-reveal">
+                    <div class="objective-image-placeholder">
+                        <img src="/assets/cattle.PNG" alt="Objective 2" class="objective-image">
+                    </div>
+                    <div class="objective-number">02</div>
+                    <p class="objective-text" data-ar="توفير خيارات متعددة من المنتجات والحلول لعملائنا وبأفضل الأسعار"
+                       data-en="Providing multiple choices of products and solutions to our customers at the best prices">
+                        توفير خيارات متعددة من المنتجات والحلول لعملائنا وبأفضل الأسعار
+                    </p>
+                </div>
+                <div class="glass-card objective-card scroll-reveal">
+                    <div class="objective-image-placeholder">
+                        <img src="/assets/saudiman.PNG" alt="Objective 3" class="objective-image">
+                    </div>
+                    <div class="objective-number">03</div>
+                    <p class="objective-text" data-ar="بناء فريق عمل يتميز بالدقة والفاعلية"
+                       data-en="Building a team characterized by accuracy and effectiveness">
+                        بناء فريق عمل يتميز بالدقة والفاعلية
+                    </p>
+                </div>
+                <div class="glass-card objective-card scroll-reveal">
+                    <div class="objective-image-placeholder">
+                        <img src="assets/saudiwoman.PNG" alt="Objective 4" class="objective-image">
+                    </div>
+                    <div class="objective-number">04</div>
+                    <p class="objective-text" data-ar="تحفيز المبادرات وتوفير فرص النمو للموظفين"
+                       data-en="Stimulating initiatives and providing growth opportunities for employees">
+                        تحفيز المبادرات وتوفير فرص النمو للموظفين
+                    </p>
+                </div>
+                <div class="glass-card objective-card scroll-reveal">
+                    <div class="objective-image-placeholder">
+                        <img src="/assets/soap.PNG" alt="Objective 5" class="objective-image">
+                    </div>
+                    <div class="objective-number">05</div>
+                    <p class="objective-text" data-ar="خدمة المجتمع بالمشاركة الإيجابية والفاعلة في بنائه"
+                       data-en="Serving the community by participating positively and actively">
+                        خدمة المجتمع بالمشاركة الإيجابية والفاعلة في بنائه
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products">
+        <div class="container">
+            <h2 class="section-title scroll-reveal" data-ar="منتجاتنا" data-en="Our Products">منتجاتنا</h2>
+            <div class="products-grid">
+                <div class="glass-card product-card scroll-reveal">
+                    <div class="product-icon">📋</div>
+                    <h3 class="product-title" data-ar="الأدوات المكتبية والقرطاسية" data-en="Office Tools & Stationery">الأدوات المكتبية والقرطاسية</h3>
+                </div>
+                <div class="glass-card product-card scroll-reveal">
+                    <div class="product-icon">⚡</div>
+                    <h3 class="product-title" data-ar="الأجهزة الكهربائية" data-en="Electrical Appliances">الأجهزة الكهربائية</h3>
+                </div>
+                <div class="glass-card product-card scroll-reveal">
+                    <div class="product-icon">☕</div>
+                    <h3 class="product-title" data-ar="الضيافة" data-en="Hospitality">الضيافة</h3>
+                </div>
+                <div class="glass-card product-card scroll-reveal">
+                    <div class="product-icon">🧼</div>
+                    <h3 class="product-title" data-ar="مواد النظافة" data-en="Cleaning Materials">مواد النظافة</h3>
+                </div>
+                <div class="glass-card product-card scroll-reveal">
+                    <div class="product-icon">🪑</div>
+                    <h3 class="product-title" data-ar="الأثاث المكتبي" data-en="Office Furniture">الأثاث المكتبي</h3>
+                </div>
+                <div class="glass-card product-card scroll-reveal">
+                    <div class="product-icon">💻</div>
+                    <h3 class="product-title" data-ar="مستلزمات الحاسوب" data-en="Computer Supplies">مستلزمات الحاسوب</h3>
+                </div>
+                <div class="glass-card product-card scroll-reveal">
+                    <div class="product-icon">🖨️</div>
+                    <h3 class="product-title" data-ar="الطابعات والأحبار" data-en="Printers & Ink">الطابعات والأحبار</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section id="clients">
+        <div class="container">
+            <h2 class="section-title scroll-reveal" data-ar="عملاؤنا" data-en="Our Clients">عملاؤنا</h2>
+            <p class="section-subtitle scroll-reveal" data-ar="نفخر بثقة شركائنا وعلاقاتنا المستمرة مع جهات رائدة في مختلف القطاعات"
+               data-en="We take pride in the trust of our partners and our ongoing relationships with leading entities across various sectors">
+                نفخر بثقة شركائنا وعلاقاتنا المستمرة مع جهات رائدة في مختلف القطاعات
+            </p>
+            <div class="clients-carousel-wrapper">
+                <div class="swiper clientsSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="glass-card client-card">
+                                <div class="client-logo-placeholder">
+                                    <img src="" alt="Aramco Logo" class="client-logo">
+                                </div>
+                                <div class="client-name" data-ar="أرامكو" data-en="Aramco">أرامكو</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="glass-card client-card">
+                                <div class="client-logo-placeholder">
+                                    <img src="" alt="Saudi Electricity Logo" class="client-logo">
+                                </div>
+                                <div class="client-name" data-ar="الكهرباء السعودية" data-en="Saudi Electricity">الكهرباء السعودية</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="glass-card client-card">
+                                <div class="client-logo-placeholder">
+                                    <img src="" alt="Dallah Hospital Logo" class="client-logo">
+                                </div>
+                                <div class="client-name" data-ar="مستشفى دلة" data-en="Dallah Hospital">مستشفى دلة</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="glass-card client-card">
+                                <div class="client-logo-placeholder">
+                                    <img src="" alt="Jeddah Airports Logo" class="client-logo">
+                                </div>
+                                <div class="client-name" data-ar="مطارات جدة" data-en="Jeddah Airports">مطارات جدة</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="glass-card client-card">
+                                <div class="client-logo-placeholder">
+                                    <img src="" alt="Saudi Ceramics Logo" class="client-logo">
+                                </div>
+                                <div class="client-name" data-ar="الخزف السعودي" data-en="Saudi Ceramics">الخزف السعودي</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="glass-card client-card">
+                                <div class="client-logo-placeholder">
+                                    <img src="" alt="Yamama Cement Logo" class="client-logo">
+                                </div>
+                                <div class="client-name" data-ar="أسمنت اليمامة" data-en="Yamama Cement">أسمنت اليمامة</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="glass-card client-card">
+                                <div class="client-logo-placeholder">
+                                    <img src="" alt="Saudi Airlines Logo" class="client-logo">
+                                </div>
+                                <div class="client-name" data-ar="الخطوط السعودية" data-en="Saudi Airlines">الخطوط السعودية</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="glass-card client-card">
+                                <div class="client-logo-placeholder">
+                                    <img src="" alt="Flynas Logo" class="client-logo">
+                                </div>
+                                <div class="client-name" data-ar="طيران ناس" data-en="Flynas">طيران ناس</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="glass-card client-card">
+                                <div class="client-logo-placeholder">
+                                    <img src="" alt="SABIC Logo" class="client-logo">
+                                </div>
+                                <div class="client-name" data-ar="سابك" data-en="SABIC">سابك</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="glass-card client-card">
+                                <div class="client-logo-placeholder">
+                                    <img src="" alt="Samsung Saudi Arabia Logo" class="client-logo">
+                                </div>
+                                <div class="client-name" data-ar="سامسونج السعودية" data-en="Samsung Saudi Arabia">سامسونج السعودية</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Navigation Arrows (shown when paused) -->
+                <div class="swiper-navigation" id="clientsNavigation">
+                    <div class="swiper-button-custom swiper-button-prev-custom">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                        </svg>
+                    </div>
+                    <div class="swiper-button-custom swiper-button-next-custom">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team">
+        <div class="container">
+            <h2 class="section-title scroll-reveal" data-ar="فريقنا" data-en="Our Team">فريقنا</h2>
+            <p class="section-subtitle scroll-reveal" data-ar="يضم فريق بوان نخبة من الكفاءات التي تجمع بين الخبرة المهنية والدقة التشغيلية لضمان أعلى مستوى من الخدمة"
+               data-en="Bawan's team consists of elite talents who combine professional experience and operational precision to ensure the highest level of service">
+                يضم فريق بوان نخبة من الكفاءات التي تجمع بين الخبرة المهنية والدقة التشغيلية لضمان أعلى مستوى من الخدمة
+            </p>
+            <div class="team-grid">
+                <div class="glass-card team-card scroll-reveal">
+                    <img class="team-avatar" src="/assets/mansour.PNG"  />
+                    <h3 class="team-name" data-ar="م.منصور الحمودي" data-en="Eng. Mansour Al-Hamoudi">م.منصور الحمودي</h3>
+                    <p class="team-position" data-ar="رئيس مجلس الإدارة" data-en="Chairman of the Board">رئيس مجلس الإدارة</p>
+                </div>
+                <div class="glass-card team-card scroll-reveal">
+                   <img class="team-avatar" src="/assets/saad.PNG"  />
+                    <h3 class="team-name" data-ar="د.سعد العمير" data-en="Dr. Saad Al-Omair">د.سعد العمير</h3>
+                    <p class="team-position" data-ar="نائب رئيس مجلس الإدارة والعضو المنتدب" data-en="Vice Chairman & Managing Director">نائب رئيس مجلس الإدارة والعضو المنتدب</p>
+                </div>
+                <div class="glass-card team-card scroll-reveal">
+                   <img class="team-avatar" src="/assets/abbida.PNG"  />
+                    <h3 class="team-name" data-ar="م.عبيده الإبراهيم" data-en="Eng. Obaidah Al-Ibrahim">م.عبيده الإبراهيم</h3>
+                    <p class="team-position" data-ar="مدير عام العمليات" data-en="Chief Operating Officer">مدير عام العمليات</p>
+                </div>
+                <div class="glass-card team-card scroll-reveal">
+                   <img class="team-avatar" src="/assets/ramy.PNG"  />
+                    <h3 class="team-name" data-ar="رامي صبري" data-en="Rami Sabry">رامي صبري</h3>
+                    <p class="team-position" data-ar="المدير المالي والإداري" data-en="Financial & Administrative Director">المدير المالي والإداري</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title scroll-reveal" data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</h2>
+            <div class="contact-grid">
+                <div class="glass-card contact-card scroll-reveal">
+                    <div class="contact-icon">📍</div>
+                    <h3 class="contact-title" data-ar="العنوان" data-en="Address">العنوان</h3>
+                    <p class="contact-info" data-ar="طريق الملك فهد – برج حمد – الدور الثالث" 
+                       data-en="King Fahd Road - Burj Hamad - Third Floor">طريق الملك فهد – برج حمد – الدور الثالث</p>
+                </div>
+                <div class="glass-card contact-card scroll-reveal">
+                    <div class="contact-icon">📞</div>
+                    <h3 class="contact-title" data-ar="الهاتف" data-en="Phone">الهاتف</h3>
+                    <p class="contact-info">0114400024</p>
+                </div>
+                <div class="glass-card contact-card scroll-reveal">
+                    <div class="contact-icon">📧</div>
+                    <h3 class="contact-title" data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</h3>
+                    <p class="contact-info"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d1b8bfb7be91b3b0a6b0bfffa2b0">info@bawan.sa</a></p>
+                </div>
+                <div class="glass-card contact-card scroll-reveal">
+                    <div class="contact-icon">🌐</div>
+                    <h3 class="contact-title" data-ar="الموقع" data-en="Website">الموقع</h3>
+                    <p class="contact-info">www.bawan.sa</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- Company Info Column -->
+                <div class="footer-column">
+                    <div class="footer-logo" data-ar="بوان" data-en="Bawan">بوان</div>
+                    <p class="footer-text" data-ar="حلول مكتبية متكاملة | خبرة تمتد لأكثر من 25 عامًا" 
+                       data-en="Integrated Office Solutions | Over 25 Years of Experience">
+                        حلول مكتبية متكاملة | خبرة تمتد لأكثر من 25 عامًا
+                    </p>
+                    <h3 data-ar="تابعنا" data-en="Follow Us">تابعنا</h3>
+                    <div class="social-links">
+                        <a href="/cdn-cgi/l/email-protection#573e393138173435233834742536" class="social-link" aria-label="Email">📧</a>
+                        <a href="https://www.bawan.sa" class="social-link" target="_blank" aria-label="Website">🌐</a>
+                        <a href="tel:0114400024" class="social-link" aria-label="Phone">📱</a>
+                    </div>
+                </div>
+
+                <!-- Links Column -->
+                <div class="footer-column">
+                    <h3 data-ar="روابط" data-en="Links">روابط</h3>
+                    <ul>
+                        <li><a href="#contact" data-ar="المركز الرئيسي" data-en="Main Office">المركز الرئيسي</a></li>
+                        <li><a href="#contact" data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</a></li>
+                        <li><a href="#vision" data-ar="رؤيتنا" data-en="Our Vision">رؤيتنا</a></li>
+                        <li><a href="#values" data-ar="قيمنا" data-en="Our Values">قيمنا</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info Column -->
+                <div class="footer-column">
+                    <h3 data-ar="معلومات الاتصال" data-en="Contact Info">معلومات الاتصال</h3>
+                    <ul>
+                        <li><a href="tel:0114400024" data-ar="📞 0114400024" data-en="📞 0114400024">📞 0114400024</a></li>
+                        <li><a href="/cdn-cgi/l/email-protection#197770787119363562707c" data-ar="📧 info@bawan.sa" data-en="📧 info@bawan.sa">📧 <span class="__cf_email__" data-cfemail="fe979098d1be919391838f">info@bawan.sa</span></a></li>
+                        <li><a href="#contact" data-ar="📍 طريق الملك فهد" data-en="📍 King Fahd Road">📍 طريق الملك فهد</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>
+                    <span data-ar="© " data-en="© ">© </span>
+                    <span id="currentYear"></span>
+                    <span data-ar=" بوان. جميع الحقوق محفوظة" data-en=" Bawan. All rights reserved"> بوان. جميع الحقوق محفوظة</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="/script1.js">  </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script2.js"> </script>
+</body>
+</html>
