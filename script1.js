@@ -27,16 +27,28 @@
         const langToggle = document.getElementById('langToggle');
         let currentLang = 'ar';
 
-        langToggle.addEventListener('click', () => {
-            currentLang = currentLang === 'ar' ? 'en' : 'ar';
-            document.documentElement.lang = currentLang;
-            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
-            document.body.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+        function applyLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            document.body.dir = lang === 'ar' ? 'rtl' : 'ltr';
 
             // Update all translatable elements
             document.querySelectorAll('[data-ar][data-en]').forEach(element => {
-                element.textContent = element.getAttribute(`data-${currentLang}`);
+                element.textContent = element.getAttribute(`data-${lang}`);
             });
+
+            // Ensure certain elements render RTL when Arabic is selected
+            document.querySelectorAll('.dir-rtl-on-ar').forEach(el => {
+                el.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            });
+        }
+
+        // Apply initial language on load
+        applyLanguage(currentLang);
+
+        langToggle.addEventListener('click', () => {
+            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+            applyLanguage(currentLang);
         });
 
         // Theme Toggle
