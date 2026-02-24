@@ -788,13 +788,13 @@ body:not(.loaded) .hero-section::after {
     }
 
     .hero-title {
-        font-size: 45px !important;
+        font-size: 30px !important;
         line-height: 1.2;
         text-align: center;
     }
 
     .hero-subtitle {
-        font-size: 20px;
+        font-size: 22px;
         /* line-height: 1.1; */
         text-align: center;
     }
@@ -2108,7 +2108,7 @@ footer .footer-column ul li a.phone-link {
 
     /* Increase hero font sizes on mobile for readability */
     .hero-title {
-        font-size: clamp(28px, 8.5vw, 56px);
+        font-size: clamp(28px, 8.5vw, 10px);
         line-height: 1.12;
     }
 
@@ -2118,7 +2118,7 @@ footer .footer-column ul li a.phone-link {
     } */
 
     .hero-description {
-        font-size: clamp(14px, 4.5vw, 12px);
+        font-size: clamp(14px, 4.5vw, 15px);
         line-height: 1.7;
     }
 
