@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="light-mode">
     <!-- Custom Cursor -->
     <!-- <div class="cursor"></div>
     <div class="cursor-follower"></div> -->
@@ -69,27 +69,25 @@
                         <circle cx="70" cy="90" r="15" fill="#e6c968"/>
                         <path d="M 85 80 L 100 80 L 100 100 L 85 100 A 15 15 0 0 0 85 80 Z" fill="#4dd4d4"/>
                     </svg> -->
-                    <div class="logo" data-ar="بوان" data-en="Bawan">بوان</div>
                 </div>
 
                 <div class="nav-center">
                     <div class="nav-links">
-                        <a href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
-                        <a href="#about" data-ar="من نحن" data-en="About">من نحن</a>
-                        <a href="#vision" data-ar="رؤيتنا" data-en="Vision">رؤيتنا</a>
-                        <a href="#values" data-ar="قيمنا" data-en="Values">قيمنا</a>
-                        <a href="#why" data-ar="لماذا بوان" data-en="Why Bawan">لماذا بوان</a>
-                        <a href="#objectives" data-ar="أهدافنا" data-en="Our Objectives">أهدافنا</a>
-                        <a href="#products" data-ar="منتجاتنا" data-en="Products">منتجاتنا</a>
-                        <a href="#clients" data-ar="عملاؤنا" data-en="Clients">عملاؤنا</a>
-                        <a href="#team" data-ar="فريقنا" data-en="Team">فريقنا</a>
-                        <a href="#contact" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a>
+                        <a id="elpop" href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+                        <a id="elpop" href="#about" data-ar="من نحن" data-en="About">من نحن</a>
+                        <a id="elpop" href="#vision" data-ar="رؤيتنا" data-en="Vision">رؤيتنا</a>
+                        <a id="elpop" href="#values" data-ar="قيمنا" data-en="Values">قيمنا</a>
+                        <a id="elpop" href="#why" data-ar="لماذا بوان" data-en="Why Bawan">لماذا بوان</a>
+                        <a id="elpop" href="#objectives" data-ar="أهدافنا" data-en="Our Objectives">أهدافنا</a>
+                        <a id="elpop" href="#products" data-ar="منتجاتنا" data-en="Products">منتجاتنا</a>
+                        <a id="elpop" href="#clients" data-ar="شركؤنا " data-en="Clients">شركؤنا </a>
+                        <a id="elpop" href="#team" data-ar="فريقنا" data-en="Team">فريقنا</a>
+                        <a id="elpop" href="#contact" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a>
                     </div>
                 </div>
 
                 <div class="nav-actions">
                     <button class="lang-toggle" id="langToggle" data-ar="EN" data-en="AR">EN</button>
-                    <button class="theme-toggle" id="themeToggle">🌙</button>
                     <div class="hamburger">
                         <span></span>
                         <span></span>
@@ -105,8 +103,8 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <div class="hero-subtitle" data-ar="حلول مكتبية متكاملة" data-en="Integrated Office Solutions">حلول مكتبية متكاملة</div>
-                    <h1 class="hero-title" data-ar="شريكك الموثوق لقطاع الأعمال" data-en="Your Trusted Business Partner">شريكك الموثوق لقطاع الأعمال</h1>
+                    <div class="hero-subtitle" data-ar="شريكك الموثوق لقطاع الأعمال" data-en="Your Trusted Business Partner">شريكك الموثوق لقطاع الأعمال</div>
+                    <h1 class="hero-title" data-ar="حلول مكتبية متكاملة" data-en="Integrated Office Solutions">حلول مكتبية متكاملة</h1>
                     <p class="hero-description" data-ar="خبرة تمتد لأكثر من 25 عامًا في السوق السعودي، نوفر المنتجات والخدمات المكتبية للقطاعين العام والخاص بمعايير عالية وقيمة مستدامة" 
                        data-en="Over 25 years of experience in the Saudi market, providing office products and services to both public and private sectors with high standards and sustainable value">
                         خبرة تمتد لأكثر من 25 عامًا في السوق السعودي، نوفر المنتجات والخدمات المكتبية للقطاعين العام والخاص بمعايير عالية وقيمة مستدامة
@@ -116,78 +114,14 @@
                         <button class="cta-button cta-secondary" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</button>
                     </div>
                 </div>
-                <div class="hero-visual">
-                    <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="heroGrad1">
-                                <stop offset="0%" style="stop-color:#4dd4d4"/>
-                                <stop offset="100%" style="stop-color:#5b8ec6"/>
-                            </linearGradient>
-                            <linearGradient id="heroGrad2">
-                                <stop offset="0%" style="stop-color:#e6c968"/>
-                                <stop offset="100%" style="stop-color:#d4a958"/>
-                            </linearGradient>
-                            <filter id="heroGlow">
-                                <feGaussianBlur stdDeviation="5"/>
-                                <feMerge>
-                                    <feMergeNode/>
-                                    <feMergeNode in="SourceGraphic"/>
-                                </feMerge>
-                            </filter>
-                        </defs>
-                        
-                        <path d="M 140 40 A 60 60 0 0 0 200 40 L 200 100 Z" fill="url(#heroGrad2)" filter="url(#heroGlow)">
-                            <animateTransform attributeName="transform" type="rotate" from="0 170 70" to="360 170 70" dur="20s" repeatCount="indefinite"/>
-                        </path>
-                        
-                        <path d="M 100 80 A 60 60 0 0 1 100 200 Z" fill="url(#heroGrad1)" filter="url(#heroGlow)" opacity="0.9">
-                            <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" repeatCount="indefinite"/>
-                        </path>
-                        
-                        <circle cx="280" cy="140" r="60" fill="url(#heroGrad2)" filter="url(#heroGlow)">
-                            <animate attributeName="r" values="60;65;60" dur="2s" repeatCount="indefinite"/>
-                        </circle>
-                        
-                        <path d="M 280 140 A 60 60 0 0 0 280 260 Z" fill="url(#heroGrad1)" filter="url(#heroGlow)">
-                            <animate attributeName="opacity" values="1;0.8;1" dur="3s" repeatCount="indefinite"/>
-                        </path>
-                        
-                        <rect x="160" y="140" width="120" height="120" fill="#9ba8bc" opacity="0.8" filter="url(#heroGlow)">
-                            <animateTransform attributeName="transform" type="rotate" from="0 220 200" to="10 220 200" dur="4s" repeatCount="indefinite" additive="sum"/>
-                        </rect>
-                        
-                        <circle cx="100" cy="260" r="60" fill="#5b8ec6" filter="url(#heroGlow)">
-                            <animate attributeName="cy" values="260;255;260" dur="3s" repeatCount="indefinite"/>
-                        </circle>
-                        
-                        <path d="M 280 260 A 60 60 0 0 0 340 260 L 340 320 Z" fill="#5b8ec6" filter="url(#heroGlow)">
-                            <animateTransform attributeName="transform" type="scale" values="1;1.05;1" dur="2s" repeatCount="indefinite" additive="sum"/>
-                        </path>
-                        
-                        <rect x="220" y="260" width="120" height="120" fill="#9ba8bc" opacity="0.8" filter="url(#heroGlow)">
-                            <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite"/>
-                        </rect>
-                        
-                        <rect x="60" y="320" width="120" height="80" rx="20" fill="url(#heroGrad1)" filter="url(#heroGlow)">
-                            <animate attributeName="y" values="320;315;320" dur="2.5s" repeatCount="indefinite"/>
-                        </rect>
-                        
-                        <circle cx="280" cy="360" r="60" fill="url(#heroGrad2)" filter="url(#heroGlow)">
-                            <animate attributeName="r" values="60;62;60" dur="2s" repeatCount="indefinite"/>
-                        </circle>
-                        
-                        <path d="M 340 320 L 400 320 L 400 400 L 340 400 A 60 60 0 0 0 340 320 Z" fill="url(#heroGrad1)" filter="url(#heroGlow)">
-                            <animate attributeName="opacity" values="1;0.9;1" dur="3s" repeatCount="indefinite"/>
-                        </path>
-                    </svg>
-                </div>
+
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about">
-        <div class="container">
+    <section style="padding-top: 0;" id="about">
+        <div  class="container">
             <h2 class="section-title scroll-reveal" data-ar="من نحن" data-en="Who We Are">من نحن</h2>
             <div class="about-grid">
                 <div class="glass-card scroll-reveal">
@@ -211,16 +145,6 @@
         <div class="container">
             <h2 class="section-title scroll-reveal" data-ar="رؤيتنا" data-en="Our Vision">رؤيتنا</h2>
             <div class="vision-content">
-                <div class="vision-images scroll-reveal">
-                    <div class="vision-image-card glass-card">
-                        <!-- <div class="vision-icon">🎯</div> -->
-                         <i class="fa-brands fa-whmcs vision-icon"></i>
-                    </div>
-                    <div class="vision-image-card glass-card">
-                        <!-- <div class="vision-icon">🤝</div> -->
-                         <i class="fa-solid fa-handshake vision-icon"></i>
-                    </div>
-                </div>
                 <div class="glass-card vision-card scroll-reveal">
                     <p class="vision-text" data-ar="أن نكون الشريك المفضل في توفير المنتجات والخدمات المكتبية من خلال تقديم تجربة متكاملة وقيمة حقيقية تدعم استمرارية أعمال عملائنا"
                        data-en="To be the preferred partner in providing office products and services by delivering an integrated experience and real value that supports the continuity and sustainability of our clients' businesses">
@@ -268,8 +192,8 @@
                         <!-- <div class="why-default-icon">💼</div> -->
                          <i class="fa-solid fa-toolbox why-default-icon"></i>
                     </div>
-                    <div class="why-number">01</div>
-                    <h3 class="why-title" data-ar="الريادة في الجودة والخدمات" data-en="Leadership in Quality & Services">الريادة في الجودة والخدمات</h3>
+                    <!-- <div class="why-number">01</div> -->
+                    <h2 class="why-title" data-ar="الريادة في الجودة والخدمات" data-en="Leadership in Quality & Services">الريادة في الجودة والخدمات</h3>
                     <p class="why-description" data-ar="رواد في كل مايحتاجه المكتب نعمل معًا لتحقيق الأهداف التي نسعى لها"
                        data-en="Pioneers in everything the modern office needs, working together to achieve our goals">
                         رواد في كل مايحتاجه المكتب نعمل معًا لتحقيق الأهداف التي نسعى لها
@@ -278,9 +202,10 @@
                 <div class="glass-card why-card scroll-reveal">
                     <div class="why-image-placeholder">
                         <!-- <div class="why-default-icon">🎯</div> -->
-                         <i class="fa-brands fa-uncharted why-default-icon"></i>
+                         <i class="fa-solid fa-handshake why-default-icon"></i>
+                         <!-- <i class="fa-brands fa-uncharted why-default-icon"></i> -->
                     </div>
-                    <div class="why-number">02</div>
+                    <!-- <div class="why-number">02</div> -->
                     <h3 class="why-title" data-ar="خدمة العملاء" data-en="Customer Service">خدمة العملاء</h3>
                     <p class="why-description" data-ar="نحن دائمًا على استعداد لتقديم أفضل مستوى من الخدمة"
                        data-en="We are always ready to deliver the highest level of service">
@@ -292,7 +217,7 @@
                         <!-- <div class="why-default-icon">💰</div> -->
                          <i class="fa-solid fa-percent why-default-icon"></i>
                     </div>
-                    <div class="why-number">03</div>
+                    <!-- <div class="why-number">03</div> -->
                     <h3 class="why-title" data-ar="أسعار مناسبة" data-en="Competitive Pricing">أسعار مناسبة</h3>
                     <p class="why-description" data-ar="نوفر منتجات وخدمات بجودة عالية وبأفضل قيمة"
                        data-en="We offer high-quality products and services at the best value">
@@ -312,7 +237,7 @@
                     <div class="objective-image-placeholder">
                         <img src="assets/dapasa.PNG" alt="Objective 1" class="objective-image">
                     </div>
-                    <div class="objective-number">01</div>
+                    <!-- <div class="objective-number">01</div> -->
                     <p class="objective-text" data-ar="الريادة في جودة المنتجات والخدمات المقدمة لعملائنا"
                        data-en="Leadership in the quality of products and services provided to our customers">
                         الريادة في جودة المنتجات والخدمات المقدمة لعملائنا
@@ -322,7 +247,7 @@
                     <div class="objective-image-placeholder">
                         <img src="assets/cattle.PNG" alt="Objective 2" class="objective-image">
                     </div>
-                    <div class="objective-number">02</div>
+                    <!-- <div class="objective-number">02</div> -->
                     <p class="objective-text" data-ar="توفير خيارات متعددة من المنتجات والحلول لعملائنا وبأفضل الأسعار"
                        data-en="Providing multiple choices of products and solutions to our customers at the best prices">
                         توفير خيارات متعددة من المنتجات والحلول لعملائنا وبأفضل الأسعار
@@ -332,7 +257,7 @@
                     <div class="objective-image-placeholder">
                         <img src="assets/saudiman.PNG" alt="Objective 3" class="objective-image">
                     </div>
-                    <div class="objective-number">03</div>
+                    <!-- <div class="objective-number">03</div> -->
                     <p class="objective-text" data-ar="بناء فريق عمل يتميز بالدقة والفاعلية"
                        data-en="Building a team characterized by accuracy and effectiveness">
                         بناء فريق عمل يتميز بالدقة والفاعلية
@@ -342,7 +267,7 @@
                     <div class="objective-image-placeholder">
                         <img src="assets/saudiwoman.PNG" alt="Objective 4" class="objective-image">
                     </div>
-                    <div class="objective-number">04</div>
+                    <!-- <div class="objective-number">04</div> -->
                     <p class="objective-text" data-ar="تحفيز المبادرات وتوفير فرص النمو للموظفين"
                        data-en="Stimulating initiatives and providing growth opportunities for employees">
                         تحفيز المبادرات وتوفير فرص النمو للموظفين
@@ -352,7 +277,7 @@
                     <div class="objective-image-placeholder">
                         <img src="assets/soap.PNG" alt="Objective 5" class="objective-image">
                     </div>
-                    <div class="objective-number">05</div>
+                    <!-- <div class="objective-number">05</div> -->
                     <p class="objective-text" data-ar="خدمة المجتمع بالمشاركة الإيجابية والفاعلة في بنائه"
                        data-en="Serving the community by participating positively and actively">
                         خدمة المجتمع بالمشاركة الإيجابية والفاعلة في بنائه
@@ -405,10 +330,10 @@
     <!-- Clients Section -->
     <section id="clients">
         <div class="container">
-            <h2 class="section-title scroll-reveal" data-ar="عملاؤنا" data-en="Our Clients">عملاؤنا</h2>
-            <p class="section-subtitle scroll-reveal" data-ar="نفخر بثقة شركائنا وعلاقاتنا المستمرة مع جهات رائدة في مختلف القطاعات"
+            <h2 class="section-title scroll-reveal" data-ar="شركاؤنا " data-en="Our Clients">شركاؤنا </h2>
+            <p class="section-subtitle scroll-reveal" data-ar="نفخر بثقة شركؤنا  وعلاقاتنا المستمرة مع جهات رائدة في مختلف القطاعات"
                data-en="We take pride in the trust of our partners and our ongoing relationships with leading entities across various sectors">
-                نفخر بثقة شركائنا وعلاقاتنا المستمرة مع جهات رائدة في مختلف القطاعات
+                نفخر بثقة شركؤنا  وعلاقاتنا المستمرة مع جهات رائدة في مختلف القطاعات
             </p>
             <div class="clients-carousel-wrapper">
                 <div class="swiper clientsSwiper">
@@ -585,7 +510,8 @@
             <div class="footer-content">
                 <!-- Company Info Column -->
                 <div class="footer-column">
-                    <div class="footer-logo" data-ar="بوان" data-en="Bawan">بوان</div>
+                    <!-- <div class="footer-logo" data-ar="بوان" data-en="Bawan">بوان</div> -->
+                     <img src="assets/logo.PNG" alt="Bawan Logo" class="logo-svg">
                     <p class="footer-text" data-ar="حلول مكتبية متكاملة | خبرة تمتد لأكثر من 25 عامًا" 
                        data-en="Integrated Office Solutions | Over 25 Years of Experience">
                         حلول مكتبية متكاملة | خبرة تمتد لأكثر من 25 عامًا

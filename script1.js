@@ -51,15 +51,16 @@
             applyLanguage(currentLang);
         });
 
-        // Theme Toggle
-        const themeToggle = document.getElementById('themeToggle');
-        let isDark = true;
-
-        themeToggle.addEventListener('click', () => {
+        // Theme Toggle (Button removed from UI, functionality preserved)
+        let isDark = false;
+        const themeToggle = () => {
             isDark = !isDark;
-            document.body.classList.toggle('light-mode');
-            themeToggle.textContent = isDark ? '🌙' : '☀️';
-        });
+            if (isDark) {
+                document.body.classList.remove('light-mode');
+            } else {
+                document.body.classList.add('light-mode');
+            }
+        };
 
         // Hamburger Menu
         const hamburger = document.querySelector('.hamburger');
@@ -184,3 +185,8 @@
                 });
             });
         }
+
+// Fade-in page: add 'loaded' class to body once everything (including images) is ready
+window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
+});

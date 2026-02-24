@@ -177,13 +177,8 @@
         setupNavigationButtons();
 
         // Update carousel direction when language changes
-        const originalLangToggleHandler = langToggle.onclick;
-        langToggle.onclick = function(e) {
-            if (originalLangToggleHandler) {
-                originalLangToggleHandler.call(this, e);
-            }
-            
-            // Wait for DOM update
+        langToggle.addEventListener('click', function() {
+            // Wait for DOM update from script1.js handler
             setTimeout(() => {
                 const newDir = document.documentElement.dir;
                 const wasPaused = isCarouselPaused;
@@ -209,59 +204,44 @@
                 
                 // Re-setup navigation buttons
                 setupNavigationButtons();
-            }, 100);
-        };
+            }, 150);
+        });
 
-        // تعطيل overscroll بالكامل programmatically
+        // Apply overscroll settings safely on DOMContentLoaded
         document.addEventListener('DOMContentLoaded', function() {
-            // تعطيل overscroll على document
-            document.body.style.overscrollBehavior = 'none';
-            document.documentElement.style.overscrollBehavior = 'none';
-            
-            // تعطيل overscroll على Swiper
             const swiperEl = document.querySelector('.clientsSwiper');
             if (swiperEl) {
-                swiperEl.style.overscrollBehavior = 'none';
                 swiperEl.style.overscrollBehaviorX = 'none';
-                swiperEl.style.overscrollBehaviorY = 'none';
-                swiperEl.style.touchAction = 'pan-y pan-x';
+                // Allow vertical (page) scroll to pass through
+                swiperEl.style.touchAction = 'pan-y';
             }
             
             const wrapperEl = document.querySelector('.swiper-wrapper');
             if (wrapperEl) {
-                wrapperEl.style.overscrollBehavior = 'none';
                 wrapperEl.style.overscrollBehaviorX = 'none';
-                wrapperEl.style.touchAction = 'pan-y pan-x';
             }
 
-            // منع browser rubber-band على السيكشن (bulletproof)
+            // Only prevent horizontal edge bounce, never block vertical scroll
             const carousel = document.querySelector('.clients-carousel-wrapper');
             if (carousel) {
-                carousel.addEventListener('touchmove', function(e) {
-                    // يمنع الـ white stretch تماماً
-                    // e.preventDefault();
-                }, { passive: false });
-            }
-
-            // Alternative: prevent only edge bounces
-            let startX = 0;
-            if (carousel) {
+                let startX = 0;
+                let startY = 0;
                 carousel.addEventListener('touchstart', (e) => {
                     startX = e.touches[0].clientX;
+                    startY = e.touches[0].clientY;
                 }, { passive: true });
 
                 carousel.addEventListener('touchmove', (e) => {
-                    const currentX = e.touches[0].clientX;
-                    const diff = currentX - startX;
-                    
-                    // منع overscroll على الحواف فقط
-                    if (clientsSwiper) {
-                        const atStart = clientsSwiper.isBeginning;
-                        const atEnd = clientsSwiper.isEnd;
-                        
-                        if ((atStart && diff > 0) || (atEnd && diff < 0)) {
-                            e.preventDefault();
-                        }
+                    if (!clientsSwiper) return;
+                    const dx = e.touches[0].clientX - startX;
+                    const dy = e.touches[0].clientY - startY;
+                    // If mainly vertical swipe, let the page scroll (do nothing)
+                    if (Math.abs(dy) > Math.abs(dx)) return;
+                    // If horizontal edge bounce, prevent it
+                    const atStart = clientsSwiper.isBeginning;
+                    const atEnd = clientsSwiper.isEnd;
+                    if ((atStart && dx > 0) || (atEnd && dx < 0)) {
+                        e.preventDefault();
                     }
                 }, { passive: false });
             }
