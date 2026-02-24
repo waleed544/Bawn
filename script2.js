@@ -4,24 +4,27 @@
         const clientsNavigation = document.getElementById('clientsNavigation');
         
         function initializeSwiper() {
+            const isDesktop = window.innerWidth > 1024;
             return new Swiper(".clientsSwiper", {
-                slidesPerView: 4,         // رقم ثابت
+                slidesPerView: 4,
                 spaceBetween: 60,
                 loop: true,
-                speed: 2000,              // أسرع!
-                freeMode: true,           // مهم للـ continuous scroll
-                freeModeMomentum: false,  // سرعة ثابتة
-                allowTouchMove: true,     // تفعيل اللمس/السحب دائماً
-                grabCursor: true,         // مؤشر اليد
-                centeredSlides: false,    // بدون centered
-                slideToClickedSlide: false, // نتحكم يدوياً
-                simulateTouch: true,      // تفعيل touch
-                // 👇 المفتاح: إيقاف edge resistance تماماً
+                speed: isDesktop ? 2000 : 800,
+                freeMode: isDesktop ? true : false,
+                freeModeMomentum: false,
+                allowTouchMove: true,
+                grabCursor: true,
+                centeredSlides: false,
+                slideToClickedSlide: false,
+                simulateTouch: true,
                 resistance: false,
                 resistanceRatio: 0,
                 edgeSwipeDetection: false,
-                autoplay: {
-                    delay: 1,             // NOT 0 (صفر يكسرها)
+                autoplay: isDesktop ? {
+                    delay: 1,
+                    disableOnInteraction: false,
+                } : {
+                    delay: 3000,
                     disableOnInteraction: false,
                 },
                 // Enable keyboard controls

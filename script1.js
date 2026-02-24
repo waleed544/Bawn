@@ -11,10 +11,9 @@
                 follower.style.transform = `translate(${e.clientX - 20}px, ${e.clientY - 20}px)`;
             });
 
-            // Magnetic effect for buttons
+            // Hover highlight for interactive elements (avoid expensive transform updates)
             document.querySelectorAll('.cta-button, .nav-links a, .glass-card').forEach(button => {
                 button.addEventListener('mouseenter', () => {
-                    cursor.style.transform += ' scale(2)';
                     cursor.style.background = 'rgba(77, 212, 212, 0.3)';
                 });
                 button.addEventListener('mouseleave', () => {
@@ -111,17 +110,22 @@
             });
         });
 
-        // Add glowing effect on scroll
+        // Add glowing effect on scroll (throttled via requestAnimationFrame)
+        const nav = document.querySelector('nav');
+        let rafPending = false;
         window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const nav = document.querySelector('nav');
-            
-            if (scrolled > 100) {
-                nav.style.boxShadow = '0 10px 40px rgba(77, 212, 212, 0.2)';
-            } else {
-                nav.style.boxShadow = 'none';
-            }
-        });
+            if (rafPending) return;
+            rafPending = true;
+            requestAnimationFrame(() => {
+                const scrolled = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrolled > 100) {
+                    nav.style.boxShadow = '0 10px 40px rgba(77, 212, 212, 0.2)';
+                } else {
+                    nav.style.boxShadow = 'none';
+                }
+                rafPending = false;
+            });
+        }, { passive: true });
 
         // CTA Button Actions
         document.querySelectorAll('.cta-button').forEach(btn => {
@@ -135,27 +139,7 @@
             });
         });
 
-        // Add particle effect on mouse move (Desktop only)
-        if (window.innerWidth > 768) {
-            document.addEventListener('mousemove', (e) => {
-                if (Math.random() > 0.95) {
-                    const particle = document.createElement('div');
-                    particle.style.position = 'fixed';
-                    particle.style.width = '4px';
-                    particle.style.height = '4px';
-                    particle.style.borderRadius = '50%';
-                    particle.style.background = 'rgba(77, 212, 212, 0.5)';
-                    particle.style.left = e.clientX + 'px';
-                    particle.style.top = e.clientY + 'px';
-                    particle.style.pointerEvents = 'none';
-                    particle.style.zIndex = '9998';
-                    particle.style.animation = 'particleFade 1s ease-out forwards';
-                    document.body.appendChild(particle);
-                    
-                    setTimeout(() => particle.remove(), 1000);
-                }
-            });
-        }
+        // Particle effect removed to avoid heavy DOM churn on mousemove
 
         // Add stagger animation to cards
         const cards = document.querySelectorAll('.glass-card');
@@ -163,26 +147,28 @@
             card.style.animationDelay = `${index * 0.1}s`;
         });
 
-        // 3D tilt effect for cards (Desktop only)
+        // 3D tilt effect for cards (Desktop only) - throttled with rAF to reduce layout thrash
         if (window.innerWidth > 768) {
             document.querySelectorAll('.glass-card').forEach(card => {
+                let rafId = null;
                 card.addEventListener('mousemove', (e) => {
                     const rect = card.getBoundingClientRect();
                     const x = e.clientX - rect.left;
                     const y = e.clientY - rect.top;
-                    
                     const centerX = rect.width / 2;
                     const centerY = rect.height / 2;
-                    
                     const rotateX = (y - centerY) / 10;
                     const rotateY = (centerX - x) / 10;
-                    
-                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-15px)`;
-                              });
-                
+                    if (rafId) cancelAnimationFrame(rafId);
+                    rafId = requestAnimationFrame(() => {
+                        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-15px)`;
+                    });
+                }, { passive: true });
+
                 card.addEventListener('mouseleave', () => {
+                    if (rafId) cancelAnimationFrame(rafId);
                     card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
-                });
+                }, { passive: true });
             });
         }
 
