@@ -817,11 +817,12 @@ body:not(.loaded) .hero-section::after {
     }
 
     .hero-title {
-        font-size: 70px !important;
+        font-size: 40px !important;
     }
 
     .hero-subtitle {
-        font-size: 8px;
+        font-size: 12px;
+        font-weight: 700;
     }
 
     .floating-shapes .shape {
