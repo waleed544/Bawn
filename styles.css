@@ -310,6 +310,8 @@
   .logo-svg {
       width: 150px;
       height: auto;
+      margin-right: 50%;
+
   }
 
   /* الوضع الداكن (الافتراضي) */
@@ -423,6 +425,7 @@
       font-weight: 600;
       transition: all 0.3s ease;
       font-size: 14px;
+      margin-left: 45px;
   }
 
   body.light-mode .lang-toggle {
@@ -2077,7 +2080,7 @@ footer .footer-column ul li a.phone-link {
   }
 
   #elpop {
-      font-size: 1.3em;
+      font-size: 1.19em;
   }
 
 /* =========================================
