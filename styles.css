@@ -2172,18 +2172,28 @@ footer .footer-column ul li a.phone-link {
       /* Make logo larger and vertically centered inside the navbar on small phones */
       .logo-container {
           gap: 10px;
-          padding-right: 6px; /* keep it near the right edge */
-          height: 56px; /* navbar-like height */
+        padding-right: 6px; /* keep it near the right edge */
+        height: 48px; /* reduced navbar height for small phones */
           align-items: center;
           display: flex;
       }
 
       .logo-svg {
-          width: auto;
-          height: 44px;
-          max-height: 56px;
+        width: auto;
+        height: 36px;
+        max-height: 48px;
           display: block;
       }
+
+    /* Reduce navbar padding to shrink overall nav height and align slide-out */
+    nav {
+        padding: 8px 0;
+    }
+
+    /* Ensure mobile slide-out aligns below the shorter navbar */
+    .nav-center {
+        top: 48px;
+    }
   }
 
   /* Particle Animation */
