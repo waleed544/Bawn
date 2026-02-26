@@ -257,7 +257,8 @@
   @media (max-width: 768px) {
       .nav-links { display: none; }
       .hamburger { display: flex; }
-      .logo-svg { width: 100px; }
+      .logo-svg { width: 200px;
+    height: auto; }
       .lang-toggle { padding-left: 10px; padding-right: 10px; }
 
       /* Mobile menu behavior when hamburger toggles .nav-center.active */
@@ -2006,6 +2007,30 @@ footer .footer-column ul li a.phone-link {
           display: flex;
       }
 
+      /* Make each hamburger menu item fill the slide-out panel */
+      .nav-center .nav-links a {
+          display: block;
+          width: 100%;
+          padding: 16px 20px;
+          box-sizing: border-box;
+          font-size: 20px;
+          text-align: left;
+          color: var(--white);
+          background: transparent;
+          border-radius: 8px;
+      }
+
+      /* optional subtle separators between items */
+      .nav-center .nav-links a + a {
+          margin-top: 6px;
+      }
+
+      /* Make the active slide-out visible and ensure items are easy to tap */
+      .nav-center.active {
+          right: 0;
+          padding-top: 120px;
+      }
+
       .hero-content {
           grid-template-columns: 1fr;
           gap: 50px;
@@ -2144,13 +2169,20 @@ footer .footer-column ul li a.phone-link {
           height: 2px;
       }
 
-      .logo-svg {
-          width: 80px;
-          height: auto;
-      }
-
+      /* Make logo larger and vertically centered inside the navbar on small phones */
       .logo-container {
           gap: 10px;
+          padding-right: 6px; /* keep it near the right edge */
+          height: 56px; /* navbar-like height */
+          align-items: center;
+          display: flex;
+      }
+
+      .logo-svg {
+          width: auto;
+          height: 44px;
+          max-height: 56px;
+          display: block;
       }
   }
 
