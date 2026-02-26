@@ -2180,10 +2180,11 @@ footer .footer-column ul li a.phone-link {
 
       .logo-svg {
         width: auto;
-        height: 36px;
-        max-height: 48px;
-          display: block;
+        height: 55px;
+        max-height: 45px;
+         
       }
+     
 
     /* Reduce navbar padding to shrink overall nav height and align slide-out */
     nav {
