@@ -1980,7 +1980,7 @@
       width: 45px;
       height: 45px;
       border-radius: 50%;
-      background: var(--glass-bg);
+      /* background: var(--glass-bg); */
       border: 1px solid var(--glass-border);
       display: flex;
       align-items: center;
@@ -1990,10 +1990,10 @@
       transition: all 0.3s ease;
   }
 
-  body.light-mode .social-link {
+  /* body.light-mode .social-link {
       background: var(--light-card-bg);
       border-color: var(--light-border);
-  }
+  } */
 
   .social-link:hover {
       background: var(--secondary-teal);
