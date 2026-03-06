@@ -1370,8 +1370,8 @@
   }
 
   .why-image-placeholder img {
-      width: 100%;
-      height: 100%;
+      /* width: 100%;
+      height: 100%; */
       object-fit: cover;
       border-radius: 20px;
       transition: transform 0.5s ease;
@@ -2537,4 +2537,10 @@
 /* Hover example */
 .phone-link:hover .phone-content {
     color: #00aaff; /* just color change, layout stays correct */
+}
+
+.ryal{
+      width: 96px;
+      height: 96px;
+      animation: bounce 2s ease-in-out infinite;
 }
